@@ -1,0 +1,14 @@
+% Le uma imagem e salva ela em uma variavel
+X = imread('imagem.jpg');
+
+% Mostra a imagem
+imshow(X);
+
+% Torna a imagem em tons de cinza
+X = double(rgb2gray(X))/255;
+
+%Torna a imagem mais clara 0 - 0.9
+Y = X.^(0.1);
+
+%Torna a imagem mais escura 1 - ...
+Y = X.^(5);
