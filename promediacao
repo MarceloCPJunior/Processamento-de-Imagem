@@ -1,0 +1,18 @@
+function y = promediacao(x,N)
+
+[L,C] = size(x);
+
+nivel = 0.5; % nível do ruído
+
+for k=1:N
+    % k-ésima aquisição ruidosa:
+    z(:,:,k) = x + nivel*randn(L,C);
+end
+
+y = zeros(L,C);
+
+for k=1:N
+    y(:,:) = y(:,:) + z(:,:,k);
+end
+
+y = y/N;
