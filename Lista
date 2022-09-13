@@ -1,0 +1,32 @@
+1) Números maiores que 1 iram almentar o brilho da imagem, números entre 0 - 1 iram diminuir o brilho
+
+5)Mk(1 <= k <= 8) detalhes-(LSB)M1 M2 M3 M4 M5 M6 M7 M8(MSB)-formas gerais
+E
+E
+C
+
+12) ...
+
+18)
+a)
+    Se o Er(Erro relativo) for muito pequeno, ou seja, as imagens são parecidas, então o PSNR() é alto
+    Se o Er for muito grande, então o PSNR é baixo
+    Uma imagem muito ruidosa será muito diferente, então o PSNR é baixo
+    Uma imagem pouco ruidosa será parecida, então o PSNR é alto
+b) Sim
+
+22)
+C
+C
+C
+
+23) Melhora o contraste na área mais vertical e piora na horizontal  
+C
+C
+C
+C
+
+24) 
+C
+C
+C - 10010011 - pegar apenas o bit mais relevante, basicamente se estiver abaixo de 128 fica 0, e menos que 128 fica 1
