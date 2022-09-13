@@ -1,0 +1,11 @@
+function X = cria_img_quadrada(L)
+
+for i=1:L
+    for j=1:L
+        if sqrt(i^2 + j^2) < L/3
+            X(i,j) = 0;
+        else
+            X(i,j) = 1;
+        end
+    end
+end
