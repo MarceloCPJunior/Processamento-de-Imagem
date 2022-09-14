@@ -1,11 +1,16 @@
-1) Números maiores que 1 iram almentar o brilho da imagem, números entre 0 - 1 iram diminuir o brilho
+1) Se os valores da imagem estiverem entre 0 e 1, valores de alfa maiores que 1 escurecem a imagem, enquanto valores de alfa entre 0 - 1 aumentam o brilho
+   (Para imagens com valores entre 0 - 255 é o inverso)
 
 5)Mk(1 <= k <= 8) detalhes-(LSB)M1 M2 M3 M4 M5 M6 M7 M8(MSB)-formas gerais
 E
 E
 C
 
-12) cria_imagem_quadrada
+12) cria_imagem_quadrada (rever)
+
+14) ponto_contro (rever)
+
+19) (estudar)
 
 18)
 a)
@@ -30,3 +35,35 @@ C
 C
 C
 C - 10010011 - pegar apenas o bit mais relevante, basicamente se estiver abaixo de 128 fica 0, e menos que 128 fica 1
+
+25) (A)
+I   - E
+II  - C
+III - C
+IV  - C
+
+26) (B)
+I1 - de
+I3 - d4
+I2 - d8
+
+27) (B)
+Y1 - P2
+Y2 - P1
+Y3 - P3
+
+28) (D)
+G1 - T2
+G2 - T1
+G3 - T3
+
+29)
+a)
+0.30275  0.3977
+0.5023   0.6002
+
+b)  X
+    (((0.3 - 0.30275)^2) + ((0.4 - 0.3977)^2) + ((0.5 - 0.5023)^2) + ((0.6 - 0.6002)^2))  /  (((0.3)^2) + ((0.4)^2) + ((0.5)^2) + ((0.6)^2)) = 1.9x10^-5
+    
+    X1
+    (((0.3 - 0.31)^2) + ((0.4 - 0.39)^2) + ((0.5 - 0.52)^2) + ((0.6 - 0.63)^2))  /  (((0.3)^2) + ((0.4)^2) + ((0.5)^2) + ((0.6)^2)) = 1.7x10^-3
