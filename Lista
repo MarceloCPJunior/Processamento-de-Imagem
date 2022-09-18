@@ -1,16 +1,64 @@
 1) Se os valores da imagem estiverem entre 0 e 1, valores de alfa maiores que 1 escurecem a imagem, enquanto valores de alfa entre 0 - 1 aumentam o brilho
    (Para imagens com valores entre 0 - 255 é o inverso)
+   
+2)
+i)   Ao multiplicar por 2 o brilho da imagem almenta.
+ii)  Ao arredondar para o inteiro mais próximo a imagem é binarizada.
+iii) Ao dividir por 2 o brilho da imagem diminui pela metade.
+
+3) A interpolação é usada para almentar a resolução da imagem.
+i)   Visinho mais próximo, copia o prixel mais próximo.
+ii)  Bilinear, pega uma média dos vizinhos da vertical e horizontal.
+iii) Bicubica, pega uma média de todos os vizinhos, vertical, horizontal e diagonal.
+
+4) A medida que fornece o maior valor normalmente é o 'd4', pois pega uma soma das duas distâncias;
+   Logo depois a 'de' pois faz uma média entre ambos os valores;
+   A menor distância é a 'd8', pois pega apenas a maior entre as duas distâncias.
+   Caso a diferença de distância entre x1 e x2 ou y1 e y2 seja 0 então a medida de todas será a igual.
 
 5)Mk(1 <= k <= 8) detalhes-(LSB)M1 M2 M3 M4 M5 M6 M7 M8(MSB)-formas gerais
 E
 E
 C
 
-12) cria_imagem_quadrada (rever)
+6) O plano de bits que representa os detalhes da imagem são os menos significativos(LSB),
+já as formas gerais são representados pelos bits mais significativos(MSB).
 
-14) ponto_contro (rever)
+-=-=-=-=-=-=-
+7) Não entendi, ver melhor depois
+-=-=-=-=-=-=-
 
-19) (estudar)
+8) ^ é uma operação que pega a imagem e multiplica seus pixels com eles mesmos,
+por a imagem estar entre 0 e 1 a imagem sera escurecida.
+
+9) A finalidade é reduzir o ruido da imagem almentando sua qualidade,
+chegando a uma maior próximidade da imagem real.
+
+10) 
+C - Ao tirar a saturação da imagem as cores perdem a força e a imagem fica em escala de cinza
+
+
+11) Ao pegar várias variações ruidozas de uma mesma imagem e fazendo uma média entre elas,
+o resultado final será mais próximo da realidade ao diminuir o erro.
+
+12) cria_imagem_quadrada
+
+13) será um quadrado branco com a borda preta
+
+14) ponto_centro
+Quanto maior o valor dentro do exp mais próximo de 0 por estar negativo, e quanto menor mais próximo de 1;
+Como a diferença calculada é relacionada ao centro da imagem (L/2) então quanto mais próximo do centro menor o valor dentro do exp;
+O alfa diminui ainda mais esse valor por estar dividindo, logo quando maior o alfa mais pexels terão um valor mais próximo de 1;
+
+15) 
+d = sqrt((i-(L/2)).^2 + (j-(L/2)).^2);
+d < (L/4)
+
+16)
+d = sqrt((i-(L/2)).^2) + sqrt((j-(L/2)).^2);
+d < (L/4)
+
+17) já respondida nas anteriores
 
 18)
 a)
@@ -19,6 +67,12 @@ a)
     Uma imagem muito ruidosa será muito diferente, então o PSNR é baixo
     Uma imagem pouco ruidosa será parecida, então o PSNR é alto
 b) Sim
+
+19) 
+a) metade da imagem
+b) almentar o alfa almenta o circulo brando do centro
+
+20) Repitida da 5
 
 22)
 C
