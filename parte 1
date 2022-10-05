@@ -1,0 +1,20 @@
+function Y = ajuste_gamma(img)
+    [L, C] = size(img);
+    
+    media = 0;
+
+    for i = 1:L
+        for j = 1:C
+            media = (media + img(i,j));
+        end
+    end
+    
+    media = media/(L*C);
+
+    if(media < 0.5)
+        Y = img.^0.5;
+    elseif(media == 0.5)
+        Y = img;
+    else(media > 0.5)
+        Y = img.^5;
+    end
